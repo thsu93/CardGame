@@ -1,0 +1,23 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Trash : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //finds draggables, deletes them. 
+        Draggable d = this.GetComponentInChildren<Draggable>();
+        if (d != null)
+        {
+            Destroy(d.gameObject);
+        }
+    }
+}
